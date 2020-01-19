@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+class Kitten < ApplicationRecord
+  validates :name, presence: true
+  validates :age, presence: true
+  validates :breed, presence: true
+  validates :cuteness, presence: true
+  validates :softness, presence: true
+end

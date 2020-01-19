@@ -1,0 +1,15 @@
+<h1 class="mt-4">Kittens</h1>
+<div>
+  <ul class="kitten-list">
+    <% @kittens.each do |kitten| %>
+      <li>
+        <p>Name : <%= kitten.name %></p>
+        <p>Age : <%= kitten.age %></p>
+        <p>Breed : <%= kitten.breed %></p>
+        <%= link_to 'More Details', kitten_path(kitten), class: "btn btn-success" %>
+        <%= link_to 'Delete', kitten_path(kitten), method: "delete", data: {confirm: "Are you sure?"}, class: "btn btn-danger"  %>
+        <hr>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+<h1>Kitten Details</h1>
+<br>
+<p>Name : <%= @kitten.name %></p>
+<p>Age : <%= @kitten.age %></p>
+<p>Breed : <%= @kitten.breed %></p>
+<p>Cuteness level : <%= @kitten.cuteness %></p>
+<p>Softness level : <%= @kitten.softness %></p>
+<%= link_to 'Delete', kitten_path(@kitten), method: "delete", data: {confirm: "Are you sure?"}, class: "btn btn-danger"  %>
+<%= link_to 'Edit', edit_kitten_path(@kitten), class: "btn btn-success" %>
